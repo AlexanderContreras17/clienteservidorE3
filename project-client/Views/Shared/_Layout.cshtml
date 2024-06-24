@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/normalize.css">
+    <link rel="stylesheet" href="/styles/main.css">
+    <script src="https://cdn.tiny.cloud/1/r9ntmf320hcycx0ci473rmxopso22j6woj4ikx9nq5kbaq84/tinymce/7/tinymce.min.js"
+            referrerpolicy="origin"></script>
+
+    <script>
+        tinymce.init({
+            selector: '#mytextarea',
+            menubar: false,
+            toolbar: false,
+            readonly: true,
+            resize: false
+        });
+    </script>
+    <title>@TempData["Title"] - Sistema Gestor de Actividades</title>
+</head>
+
+<body>
+    
+    <main class="main">
+
+        @RenderBody()
+
+    </main>
+    <footer class="footer">
+        <p>Lorem Ipsum Industries &copy; 2024</p>
+    </footer>
+
+    <script src="~/scripts/main.js"></script>
+</body>
+
+</html>

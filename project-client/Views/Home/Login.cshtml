@@ -1,0 +1,33 @@
+﻿@model project_client.Models.LoginViewModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="~/styles/Styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <header id="header2">
+        <h1 class="logo1">Sistema de actividades</h1>
+    </header>
+    <form action="~/iniciar-sesion" method="POST" class="login-form">
+        <h1 class="wlc">Bienvenido</h1>
+        <div class="row">
+            <input type="email" asp-for="UserName" placeholder="Correo electrónico" required>
+        </div>
+        <div class="">
+            <div class="row">
+                <input type="password" asp-for="Password" placeholder="Contraseña" required>
+            </div>
+        </div>
+        <p class="login-error">@Html.ValidationSummary(true)</p>
+        <button class="btn-login">Iniciar sesion</button>
+    </form>
+</body>
+</html>
